@@ -1,0 +1,151 @@
+body {
+    background-color: $mainColor;
+}
+
+.hero {
+    @include flexible(column,center,center);
+    background-image: url(../assets/images/bodygym2.avif);
+    background-size: cover;
+    height: 600px;
+
+    & article {
+
+        width: 60%;
+
+    }
+
+    & h1 {
+        font-weight: bold;        
+    }
+    
+    
+}
+
+
+.box2 {
+    @include flexible(column,center,center);
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    position: relative;
+    border-radius: 15px;
+    border: 1px solid $borderColor;
+
+    & div {
+        z-index: 3;
+        border-radius: 14px;
+        background-color: black;
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: end start;
+        opacity: 0.5;
+    }
+
+    & img {
+        @include images(100%,100%);
+        filter: blur(3px);
+        position: absolute;
+        border-radius: 6px;
+        box-shadow: 2px 2px 5px 2px rgba(255, 235, 205, 0.233);
+        border: 1px solid $borderColor;
+    }
+}
+
+
+.b1 {
+
+    grid-area: a1;
+    
+}
+
+.b2 {
+
+    grid-area: a2;
+}
+
+.b3 {
+
+    grid-area: a3;
+}
+
+.b4 {
+
+    grid-area: a4;
+
+}
+
+.b5 {
+    
+    grid-area: a5;
+}
+
+.b6 {
+    
+    grid-area: a6;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    place-items: end center;
+    grid-template-areas: 
+    'a3 a3 a1 a1'
+    'a2 a2 a1 a1'
+    'a5 a5 a5 a5' ;
+
+}
+
+.box2:hover img {
+    filter: blur(0);
+    @include images(100%,100%);
+
+    &:hover {
+        background-color: cadetblue;
+        box-shadow: 3px 3px 13px 5px rgba(20, 20, 73, 0.603);
+    }
+
+    &:nth-child(even){
+        flex-direction: row-reverse;
+        background-color: $primaryColor;
+    }
+}
+
+.row {
+    margin: 0;
+    justify-content: space-around;
+}
+
+.btn-primary {
+    background-color: $mainColor;
+    border-radius: 0;
+    color: #111;
+    font-size: 24px;
+    border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn:active {
+    border: 2px solid $mainColor;
+    color: burlywood;
+    background-color: transparent;
+}
+
+.card {
+    border-radius: 0;
+    padding: 0;
+    width: 400px;
+    margin: 10px 0;
+}
+
+.card-img-top {
+    border-radius: 0;
+}
+
+.carousel-inner, .carousel-item {
+    height: 600px;
+}
+
+.carousel-item img {
+    @include images(50%,100%);
+}

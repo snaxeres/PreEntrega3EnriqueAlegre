@@ -1,0 +1,27 @@
+@for $valor from 1 through 15 {
+    .pd-#{$valor} {
+        padding: 1px * $valor;
+    }
+}
+
+@for $valor from 1 through 15 {
+    .gp-#{$valor} {
+        gap: 1px * $valor;
+    }
+}
+
+
+
+
+@mixin flexible($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin images($width, $height) {
+    width: $width;
+    height: $height;
+    object-fit: cover;
+}

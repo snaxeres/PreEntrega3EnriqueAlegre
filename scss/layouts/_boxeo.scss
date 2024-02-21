@@ -1,0 +1,90 @@
+.box__boxeo {
+    @include flexible(column,center,center);
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    position: relative;
+    border-radius: 15px;
+    border: 1px solid $borderColor;
+    
+    & div {
+        z-index: 3;
+        border-radius: 14px;
+        background-color: black;
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: end start;
+        opacity: 0.5;
+    }
+
+    & img {
+        @include images(100%,100%);
+        filter: blur(3px);
+        position: absolute;
+        border-radius: 6px;
+        box-shadow: 2px 2px 5px 2px rgba(255, 235, 205, 0.233);
+        border: 1px solid $borderColor;
+    }
+
+    &:hover img {
+        filter: blur(0);
+        @include images(100%,100%);
+    }
+
+    &:hover {
+        background-color: cadetblue;
+        box-shadow: 3px 3px 13px 5px rgba(20, 20, 73, 0.603);
+    }
+
+    &:nth-child(even){
+        flex-direction: row-reverse;
+        background-color: $primaryColor;
+    }
+
+}
+
+.c1 {
+
+    grid-area: a1;
+    
+}
+
+.c2 {
+
+    grid-area: a2;
+}
+
+.c3 {
+
+    grid-area: a3;
+}
+
+.c4 {
+
+    grid-area: a4;
+
+}
+
+.c5 {
+    
+    grid-area: a5;
+}
+
+.c6 {
+    
+    grid-area: a6;
+}
+
+.grid__boxeo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: repeat(3, 300px);
+    place-items: end center;
+    grid-template-areas: 
+    'a3 a3 a6 a6'
+    'a3 a3 a4 a2'
+    'a5 a5 a1 a1' ;
+}
+

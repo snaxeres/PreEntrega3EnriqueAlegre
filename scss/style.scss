@@ -1,0 +1,60 @@
+//base
+@import 'base/vars';
+@import 'base/reset';
+@import 'base/utils';
+
+
+
+//components
+@import 'components/navbar';
+@import 'components/footer';
+
+
+//layouts
+@import 'layouts/index';
+@import 'layouts/boxeo';
+@import 'layouts/contacto';
+@import 'layouts/crossfit';
+@import 'layouts/spinning';
+@import 'layouts/mediaqueries';
+
+.form {
+    display: flex;
+    flex-direction: row;
+    background-color: $mainColor;
+    width: 100%;
+    padding: 50px 20px;
+    gap: 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    grid-area: form;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .form iframe {
+    width: 50%;
+    height: 250px;
+  }
+  
+  .form label {
+    font-size: 20px;
+    align-self: flex-end;
+  }
+  
+  .form input,
+  .form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    background-color: rgb(250, 200, 125);
+    border: 2px solid $mainColor;
+    color: $mainColor;
+  
+  }

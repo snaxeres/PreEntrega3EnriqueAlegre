@@ -1,0 +1,48 @@
+.hero__container__spinning {
+    @include flexible(column,center,center);
+}
+
+.box__spinning{
+    width: 90%;
+    background-color: rgb(179, 160, 160);
+    padding: 15px;
+    border: 2px solid $borderColor;
+    display: flex;
+    transition: 0.5s;
+
+    &:hover img {
+        filter: blur(0);
+        @include images(400px,500px);
+    }
+
+    &:hover {
+        background-color: cadetblue;
+        box-shadow: 3px 3px 13px 5px rgba(20, 20, 73, 0.603);
+    }
+
+    &:nth-child(even){
+        flex-direction: row-reverse;
+        background-color: $primaryColor;
+    }
+
+    &:nth-child(even):hover {
+        background-color: $mainColor;
+    }
+}
+
+.box__img__spinning {
+    @include images(50%,300px);
+    overflow: hidden;
+
+    & img {
+        @include images(100%,100%);
+        filter: blur(5px);
+        transition: 0.5s;
+    }
+}
+
+
+.box__content__spinning {
+    @include flexible(column,center,center);
+    width: 50%;
+}
